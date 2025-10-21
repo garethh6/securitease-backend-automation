@@ -4,11 +4,7 @@ jobs:
   build-and-test:
     runs-on: ubuntu-latest
     env:
-<<<<<<< HEAD
-      FORCE_HARD_SASL: true
-=======
       SOFT_ASSERT_SASL: true
->>>>>>> 12cc977 (chore: initial commit - backend automation v6)
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-java@v4
