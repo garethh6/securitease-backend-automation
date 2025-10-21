@@ -14,6 +14,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class RestCountriesTests {
 
+    /** Fetch all countries using the shared request spec. */
     private Response fetchAllCountries() {
         return RestAssured
                 .given()
@@ -48,6 +49,7 @@ public class RestCountriesTests {
     void confirmNumberOfCountries() {
         Response response = fetchAllCountries();
         List<Map<String, Object>> list = response.jsonPath().getList("$");
+
         int count = 0;
         if (list != null) {
             for (Object o : list) {
@@ -59,19 +61,17 @@ public class RestCountriesTests {
                 }
             }
         }
+
         System.out.printf("ℹ️ API returned %d countries%n", count);
         assertThat(count).as("Expected exactly 195 countries").isEqualTo(195);
         System.out.println("✅ Confirmed there are 195 countries.");
     }
 
     @Test
-<<<<<<< HEAD
-    @DisplayName("Scenario 3 — Validate Languages: SASL should be among South Africa's official languages")
-=======
     @DisplayName("Scenario 3 — Validate Languages (soft in CI): SASL should be among South Africa's official languages")
->>>>>>> 12cc977 (chore: initial commit - backend automation v6)
     void validateSASLLanguageForSouthAfrica() {
         Response response = fetchAllCountries();
+
         List<Map<String, Object>> countries = response.jsonPath().getList("$");
         assertThat(countries).isNotNull().isNotEmpty();
 

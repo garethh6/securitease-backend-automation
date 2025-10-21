@@ -4,40 +4,18 @@
   "minItems": 1,
   "items": {
     "type": "object",
-    "required": [
-      "name",
-      "cca2"
-    ],
+    "required": ["name", "cca2"],
     "properties": {
-      "cca2": {
-        "type": "string",
-        "minLength": 2,
-        "maxLength": 3
-      },
+      "cca2": { "type": "string", "minLength": 2, "maxLength": 3 },
       "name": {
         "type": "object",
-        "required": [
-          "common"
-        ],
-        "properties": {
-          "common": {
-            "type": "string"
-          }
-        },
+        "required": ["common"],
+        "properties": { "common": { "type": "string" } },
         "additionalProperties": true
       },
-      "languages": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string"
-        }
-      },
-      "independent": {
-        "type": "boolean"
-      },
-      "unMember": {
-        "type": "boolean"
-      }
+      "languages": { "type": "object", "additionalProperties": { "type": "string" } },
+      "independent": { "type": "boolean" },
+      "unMember": { "type": "boolean" }
     },
     "additionalProperties": true
   }

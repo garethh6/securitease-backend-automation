@@ -33,17 +33,11 @@ public final class ApiConfig {
                 .build();
     }
 
-    public static boolean softAssertSASL() {
-        // Default to SOFT (true) because public datasets may lag.
-        // Set FORCE_HARD_SASL=true to make it a hard assertion in CI/local.
-        String forceHard = System.getenv("FORCE_HARD_SASL");
-        if (forceHard != null && forceHard.equalsIgnoreCase("true")) {
-            return false;
-        }
-        String val = System.getenv("SOFT_ASSERT_SASL");
-        if (val == null) {
-            return true; // default soft
-        }
-        return val.equalsIgnoreCase("true");
+public static boolean softAssertSASL() {
+    String forceHard = System.getenv("FORCE_HARD_SASL");
+    if (forceHard != null && forceHard.equalsIgnoreCase("true")) {
+        return false;
     }
+    String val = System.getenv("SOFT_ASSERT_SASL");
+    return val == null || val.equalsIgnoreCase("true");
 }
