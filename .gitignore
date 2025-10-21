@@ -1,0 +1,22 @@
+# Maven
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs & reports (keep artifacts in CI, ignore local)
+*.log
+hs_err_pid*
+replay_pid*
+*.dump
+*.dumpstream
+
+# Env files
+.env

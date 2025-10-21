@@ -1,0 +1,24 @@
+{
+  "name": "SecuritEase Backend Automation (Java 17 + Maven)",
+  "image": "mcr.microsoft.com/devcontainers/java:17",
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "java.configuration.runtimes": [
+          { "name": "JavaSE-17", "path": "/usr/lib/jvm/msopenjdk-17" }
+        ]
+      },
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "redhat.vscode-xml",
+        "mhutchie.git-graph",
+        "ms-azuretools.vscode-docker"
+      ]
+    }
+  },
+  "postCreateCommand": "mvn -q -e -DskipTests=false test"
+}
