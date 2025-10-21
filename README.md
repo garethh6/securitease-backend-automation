@@ -1,6 +1,6 @@
 # SecuritEase — BACK-END AUTOMATION TASK
 
-[![View Test Report](https://img.shields.io/badge/View%20Latest%20Test%20Report-blue?style=for-the-badge)](https://garethh6.github.io/securitease-backend-automation/surefire-report.html/)
+[![View Test Report](https://img.shields.io/badge/View%20Latest%20Test%20Report-blue?style=for-the-badge)](https://garethh6.github.io/securitease-backend-automation/surefire-report/)
 
 
 This version adds the `fields` query param required by the API and validates against a **minimal schema** that matches those fields.
