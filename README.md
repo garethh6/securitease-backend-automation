@@ -1,4 +1,7 @@
-# SecuritEase — BACK-END AUTOMATION TASK (Fixed v2)
+# SecuritEase — BACK-END AUTOMATION TASK
+
+[![View Test Report](https://img.shields.io/badge/View%20Latest%20Test%20Report-blue?style=for-the-badge)](https://garethh6.github.io/securitease-backend-automation/)
+
 
 This version adds the `fields` query param required by the API and validates against a **minimal schema** that matches those fields.
 
@@ -85,3 +88,4 @@ The release workflow will:
   - `dist/surefire-reports/`
   - `dist/allure-results/`
   - `dist/allure-report/` (static HTML)
+
