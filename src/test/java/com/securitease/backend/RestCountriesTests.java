@@ -65,7 +65,11 @@ public class RestCountriesTests {
     }
 
     @Test
+<<<<<<< HEAD
     @DisplayName("Scenario 3 — Validate Languages: SASL should be among South Africa's official languages")
+=======
+    @DisplayName("Scenario 3 — Validate Languages (soft in CI): SASL should be among South Africa's official languages")
+>>>>>>> 12cc977 (chore: initial commit - backend automation v6)
     void validateSASLLanguageForSouthAfrica() {
         Response response = fetchAllCountries();
         List<Map<String, Object>> countries = response.jsonPath().getList("$");

@@ -55,7 +55,11 @@ The API returns territories & regions (~250). We filter to **independent or UN m
 4. **PR flow**: open a feature branch, push, and create a PR — CI runs automatically on push/PR.
 
 ### Notes
+<<<<<<< HEAD
 - CI enforces `FORCE_HARD_SASL=true` so SASL must appear; switch to soft locally via `setx SOFT_ASSERT_SASL true` or unset FORCE_HARD_SASL.
+=======
+- CI uses `SOFT_ASSERT_SASL=true` so runs pass while surfacing a warning so SASL must appear; switch to soft locally via `setx SOFT_ASSERT_SASL true` or unset FORCE_HARD_SASL.
+>>>>>>> 12cc977 (chore: initial commit - backend automation v6)
 - Artifacts uploaded: Surefire + Allure results.
 
 
