@@ -27,6 +27,10 @@ jobs:
           mvn -q allure:report
           mvn -q site
 
+                - name: Add redirect to surefire-report
+        run: |
+          echo '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; url=surefire-report.html"/></head><body>Redirecting...</body></html>' > target/site/index.html
+
       - name: Upload HTML reports
         uses: actions/upload-pages-artifact@v3
         with:
